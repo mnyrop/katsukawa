@@ -1,0 +1,55 @@
+{% assign placeholder = include.placeholder | default: 'Search... ' %}
+{% assign config = site.search.main %}
+{% assign index = config.index | absolute_url %}
+{%- capture fields -%}
+  {% for collection in config.collections %}
+    {% for field in collection[1].fields %}
+      {{ field }}{% unless forloop.last %}|||{% endunless %}
+    {% endfor %}
+  {% endfor %}
+{%- endcapture -%}
+{% assign fields = fields | split: '|||' | uniq %}
+
+<div class='search-block'>
+  <div class='input-group'>
+    <input type='text' class='form-control' id='search' name='x' placeholder='{{ placeholder }}'>
+  </div>
+  <div id='results'></div>
+</div>
+
+<script src="{{ '/assets/elasticlunr.min.js' | absolute_url }}"></script>
+<script type='text/javascript'>
+  $(document).ready(function() {
+    $.getJSON("{{ index }}", function(store) {
+      window.index = new elasticlunr.Index;
+      window.store = store;
+      index.saveDocument(false);
+      index.setRef('lunr_id');
+      {% for field in fields %}index.addField('{{ field | strip }}');{% endfor %}
+      for (i in store){
+        index.addDoc(store[i]);
+      }
+      $('input#search').on('keyup', function() {
+        var results_div = $('#results');
+        var query = $(this).val();
+        var results = index.search(query, { boolean: 'AND', expand: true });
+        results_div.empty();
+        for (var r in results) {
+          var ref = results[r].ref;
+          var item = store[ref];
+          var pid = item.pid;
+          var label = item.label;
+          var link = item.permalink;
+          if ('thumbnail' in item) {
+            var thumb = `<img class='sq-thumb-sm' src='{{ "" | absolute_url }}${item.thumbnail}'/>&nbsp;&nbsp;&nbsp;`
+          }
+          else {
+            var thumb = '';
+          }
+          var result = `<div class="result"><a href="{{ '' | absolute_url }}${link}">${thumb}<p><span class="title">${item.label}</span><br></p></a></p></div>`;
+          results_div.append(result);
+        }
+      });
+    });
+  });
+</script>
