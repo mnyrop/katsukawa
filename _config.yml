@@ -18,10 +18,10 @@
 # Feel free to change these! For more info, refer to:
 # ~> https://jekyllrb.com/docs/configuration/options/
 
-title:                'Wax'
+title:                "Katsukawa Shunshō \n@ The Rijksmuseum"
 description:          'Minimal Exhibitions with Jekyll'
-url:                  'https://minicomp.github.io'
-baseurl:              '/wax'
+url:                  'http://marii.info'
+baseurl:              '/katsukawa'
 copyright:            'Example copyright org, 2019'
 logo:                 '/assets/logo.png'
 
@@ -50,7 +50,7 @@ kramdown:
 # COLLECTION SETTINGS
 # --------------------------------------------------------------
 # Wax leverages Jekyll collections for much of its
-# functionality, therefor some of the keys below are from
+# functionality, therefore some of the keys below are from
 # Jekyll while others are Wax-specific.
 # For more info, refer to:
 # ~> https://jekyllrb.com/docs/collections/
@@ -58,9 +58,9 @@ kramdown:
 collections:
   exhibits:
     output: true
-  qatar: # name of collection
+  items: # name of collection
     output: true # makes sure pages are output as html files
-    layout: 'rijks_item' # the layout for the pages to use
+    layout: 'katsukawa_item' # the layout for the pages to use
     metadata:
       source: 'katsukawa/items.csv' # path to the metadata file within `_data`
     images:
@@ -78,15 +78,14 @@ search:
   main:
     index: '/search/index.json' # file the index will get written to
     collections:
-      qatar:
+      items:
         content: false # whether or not to index page content
         fields: # the metadata fields to index
-          - artist
-          - location
           - label
+          - artist
+          - description
           - _date
-          - object_type
-          - current_location
+          - medium
 
 # --------------------------------------------------------------
 # SITE MENU SETTINGS

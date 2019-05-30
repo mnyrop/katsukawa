@@ -1,0 +1,38 @@
+---
+layout: none
+---
+{
+  "@id": "{{ '/' | absolute_url }}img/derivatives/simple/sequence/rijks_kasukawa_006.json",
+  "@type": "sc:Sequence",
+  "canvases": [
+    {
+      "@type": "sc:Canvas",
+      "@id": "{{ '/' | absolute_url }}img/derivatives/simple/canvas/rijks_kasukawa_006.json",
+      "label": "front",
+      "width": 1255,
+      "height": 2764,
+      "thumbnail": "{{ '/' | absolute_url }}img/derivatives/simple/images/rijks_kasukawa_006/full/250,/0/default.jpg",
+      "images": [
+        {
+          "@type": "oa:Annotation",
+          "@id": "{{ '/' | absolute_url }}img/derivatives/simple/annotation/rijks_kasukawa_006.json",
+          "motivation": "sc:painting",
+          "resource": {
+            "@id": "{{ '/' | absolute_url }}img/derivatives/simple/images/rijks_kasukawa_006/full/full/0/default.jpg",
+            "@type": "dcterms:Image",
+            "format": "image/jpeg",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "{{ '/' | absolute_url }}img/derivatives/simple/images/rijks_kasukawa_006",
+              "profile": "http://iiif.io/api/image/2/level0.json"
+            },
+            "width": 1255,
+            "height": 2764
+          },
+          "on": "{{ '/' | absolute_url }}img/derivatives/simple/canvas/rijks_kasukawa_006.json"
+        }
+      ]
+    }
+  ],
+  "@context": "http://iiif.io/api/presentation/2/context.json"
+}

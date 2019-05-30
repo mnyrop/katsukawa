@@ -58,7 +58,8 @@ header & nav bar
   .navbar-brand {
     font-weight: 700;
     color: $accent-light;
-    font-size: 2rem;
+    font-size: $site-title-size;
+    white-space: normal;
   }
 
   .navbar-brand:hover {

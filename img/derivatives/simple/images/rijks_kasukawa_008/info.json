@@ -1,0 +1,41 @@
+---
+layout: none
+---
+{
+  "@context": "http://iiif.io/api/image/2/context.json",
+  "@id": "{{ '/' | absolute_url }}img/derivatives/simple/images/rijks_kasukawa_008",
+  "protocol": "http://iiif.io/api/image",
+  "width": 1297,
+  "height": 2697,
+  "sizes": [
+    {
+      "width": 1297,
+      "height": 2697
+    },
+    {
+      "width": 250,
+      "height": 520
+    }
+  ],
+  "profile": [
+    "http://iiif.io/api/image/2/level0.json",
+    {
+      "supports": [
+        "cors",
+        "sizeByWhListed",
+        "baseUriRedirect"
+      ]
+    }
+  ],
+  "tiles": [
+    {
+      "width": 512,
+      "scaleFactors": [
+        1,
+        2,
+        4,
+        8
+      ]
+    }
+  ]
+}
