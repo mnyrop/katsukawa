@@ -1,0 +1,49 @@
+---
+layout: none
+---
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/rijks_kasukawa_007/manifest.json",
+  "@type": "sc:Manifest",
+  "label": "rijks_kasukawa_007",
+  "thumbnail": "{{ '/' | absolute_url }}img/derivatives/iiif/images/rijks_kasukawa_007/full/250,/0/default.jpg",
+  "viewingDirection": "left-to-right",
+  "viewingHint": "individuals",
+  "sequences": [
+    {
+      "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/sequence/rijks_kasukawa_007.json",
+      "@type": "sc:Sequence",
+      "canvases": [
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/canvas/rijks_kasukawa_007.json",
+          "label": "front",
+          "width": 1926,
+          "height": 2976,
+          "thumbnail": "{{ '/' | absolute_url }}img/derivatives/iiif/images/rijks_kasukawa_007/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/annotation/rijks_kasukawa_007.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/images/rijks_kasukawa_007/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/images/rijks_kasukawa_007",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 1926,
+                "height": 2976
+              },
+              "on": "{{ '/' | absolute_url }}img/derivatives/iiif/canvas/rijks_kasukawa_007.json"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "full": "{{ '/' | absolute_url }}img/derivatives/iiif/images/rijks_kasukawa_007/full/full/0/default.jpg"
+}

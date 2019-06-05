@@ -11,7 +11,7 @@ collection: items
 source: https://commons.wikimedia.org/wiki/File:Acteur_Ichikawa_Danjuro_IV_in_de_rol_van_de_geest_Ki_no_Natora-Rijksmuseum_RP-P-1956-662.jpeg
 order: '04'
 layout: katsukawa_item
-thumbnail: "/img/derivatives/simple/images/rijks_kasukawa_005/full/250,/0/default.jpg"
-full: "/img/derivatives/simple/images/rijks_kasukawa_005/full/full/0/default.jpg"
-manifest: "/img/derivatives/simple/rijks_kasukawa_005/manifest.json"
+thumbnail: "/img/derivatives/iiif/images/rijks_kasukawa_005/full/250,/0/default.jpg"
+full: "/img/derivatives/iiif/images/rijks_kasukawa_005/full/full/0/default.jpg"
+manifest: "/img/derivatives/iiif/rijks_kasukawa_005/manifest.json"
 ---

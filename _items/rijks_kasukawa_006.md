@@ -12,7 +12,7 @@ collection: items
 source: https://commons.wikimedia.org/wiki/File:Acteur_Ichikawa_Yaozo_met_lang_zwaard-Rijksmuseum_RP-P-1956-651.jpeg
 order: '05'
 layout: katsukawa_item
-thumbnail: "/img/derivatives/simple/images/rijks_kasukawa_006/full/250,/0/default.jpg"
-full: "/img/derivatives/simple/images/rijks_kasukawa_006/full/full/0/default.jpg"
-manifest: "/img/derivatives/simple/rijks_kasukawa_006/manifest.json"
+thumbnail: "/img/derivatives/iiif/images/rijks_kasukawa_006/full/250,/0/default.jpg"
+full: "/img/derivatives/iiif/images/rijks_kasukawa_006/full/full/0/default.jpg"
+manifest: "/img/derivatives/iiif/rijks_kasukawa_006/manifest.json"
 ---
